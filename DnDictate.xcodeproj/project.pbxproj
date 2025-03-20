@@ -1,0 +1,482 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		22C352C72D8BE2C00053B098 /* Auth in Frameworks */ = {isa = PBXBuildFile; productRef = 22C352C62D8BE2C00053B098 /* Auth */; };
+		22C352C92D8BE2C00053B098 /* Functions in Frameworks */ = {isa = PBXBuildFile; productRef = 22C352C82D8BE2C00053B098 /* Functions */; };
+		22C352CB2D8BE2C00053B098 /* PostgREST in Frameworks */ = {isa = PBXBuildFile; productRef = 22C352CA2D8BE2C00053B098 /* PostgREST */; };
+		22C352CD2D8BE2C00053B098 /* Realtime in Frameworks */ = {isa = PBXBuildFile; productRef = 22C352CC2D8BE2C00053B098 /* Realtime */; };
+		22C352CF2D8BE2C00053B098 /* Storage in Frameworks */ = {isa = PBXBuildFile; productRef = 22C352CE2D8BE2C00053B098 /* Storage */; };
+		22C352E62D8BEA1C0053B098 /* Supabase in Frameworks */ = {isa = PBXBuildFile; productRef = 22C352E52D8BEA1C0053B098 /* Supabase */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		22C352B42D8BE2490053B098 /* DnDictate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DnDictate.app; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
+		22C352EA2D8BEC7A0053B098 /* Exceptions for "DnDictate" folder in "Copy Bundle Resources" phase from "DnDictate" target */ = {
+			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
+			buildPhase = 22C352B22D8BE2490053B098 /* Resources */;
+			membershipExceptions = (
+				AuthView.swift,
+				SignIn.swift,
+			);
+		};
+/* End PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		22C352B62D8BE2490053B098 /* DnDictate */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				22C352EA2D8BEC7A0053B098 /* Exceptions for "DnDictate" folder in "Copy Bundle Resources" phase from "DnDictate" target */,
+			);
+			path = DnDictate;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		22C352B12D8BE2490053B098 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22C352CB2D8BE2C00053B098 /* PostgREST in Frameworks */,
+				22C352C92D8BE2C00053B098 /* Functions in Frameworks */,
+				22C352E62D8BEA1C0053B098 /* Supabase in Frameworks */,
+				22C352C72D8BE2C00053B098 /* Auth in Frameworks */,
+				22C352CF2D8BE2C00053B098 /* Storage in Frameworks */,
+				22C352CD2D8BE2C00053B098 /* Realtime in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		22C352AB2D8BE2490053B098 = {
+			isa = PBXGroup;
+			children = (
+				22C352B62D8BE2490053B098 /* DnDictate */,
+				22C352E42D8BEA1C0053B098 /* Frameworks */,
+				22C352B52D8BE2490053B098 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		22C352B52D8BE2490053B098 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				22C352B42D8BE2490053B098 /* DnDictate.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		22C352E42D8BEA1C0053B098 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		22C352B32D8BE2490053B098 /* DnDictate */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 22C352C22D8BE24A0053B098 /* Build configuration list for PBXNativeTarget "DnDictate" */;
+			buildPhases = (
+				22C352B02D8BE2490053B098 /* Sources */,
+				22C352B12D8BE2490053B098 /* Frameworks */,
+				22C352B22D8BE2490053B098 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				22C352D52D8BE3EF0053B098 /* PBXTargetDependency */,
+				22C352D72D8BE3EF0053B098 /* PBXTargetDependency */,
+				22C352D92D8BE3EF0053B098 /* PBXTargetDependency */,
+				22C352DB2D8BE3EF0053B098 /* PBXTargetDependency */,
+				22C352DD2D8BE3EF0053B098 /* PBXTargetDependency */,
+				22C352DF2D8BE3EF0053B098 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				22C352B62D8BE2490053B098 /* DnDictate */,
+			);
+			name = DnDictate;
+			packageProductDependencies = (
+				22C352C62D8BE2C00053B098 /* Auth */,
+				22C352C82D8BE2C00053B098 /* Functions */,
+				22C352CA2D8BE2C00053B098 /* PostgREST */,
+				22C352CC2D8BE2C00053B098 /* Realtime */,
+				22C352CE2D8BE2C00053B098 /* Storage */,
+				22C352E52D8BEA1C0053B098 /* Supabase */,
+			);
+			productName = DnDictate;
+			productReference = 22C352B42D8BE2490053B098 /* DnDictate.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		22C352AC2D8BE2490053B098 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1620;
+				LastUpgradeCheck = 1620;
+				TargetAttributes = {
+					22C352B32D8BE2490053B098 = {
+						CreatedOnToolsVersion = 16.2;
+					};
+				};
+			};
+			buildConfigurationList = 22C352AF2D8BE2490053B098 /* Build configuration list for PBXProject "DnDictate" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 22C352AB2D8BE2490053B098;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				22C352C52D8BE2C00053B098 /* XCRemoteSwiftPackageReference "supabase-swift" */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 22C352B52D8BE2490053B098 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				22C352B32D8BE2490053B098 /* DnDictate */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		22C352B22D8BE2490053B098 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		22C352B02D8BE2490053B098 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		22C352D52D8BE3EF0053B098 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = 22C352D42D8BE3EF0053B098 /* Auth */;
+		};
+		22C352D72D8BE3EF0053B098 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = 22C352D62D8BE3EF0053B098 /* Functions */;
+		};
+		22C352D92D8BE3EF0053B098 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = 22C352D82D8BE3EF0053B098 /* PostgREST */;
+		};
+		22C352DB2D8BE3EF0053B098 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = 22C352DA2D8BE3EF0053B098 /* Realtime */;
+		};
+		22C352DD2D8BE3EF0053B098 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = 22C352DC2D8BE3EF0053B098 /* Storage */;
+		};
+		22C352DF2D8BE3EF0053B098 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = 22C352DE2D8BE3EF0053B098 /* Supabase */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		22C352C02D8BE24A0053B098 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		22C352C12D8BE24A0053B098 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		22C352C32D8BE24A0053B098 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"DnDictate/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.samrobs.DnDictate;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_STRICT_CONCURRENCY = minimal;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		22C352C42D8BE24A0053B098 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"DnDictate/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.samrobs.DnDictate;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_STRICT_CONCURRENCY = minimal;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		22C352AF2D8BE2490053B098 /* Build configuration list for PBXProject "DnDictate" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				22C352C02D8BE24A0053B098 /* Debug */,
+				22C352C12D8BE24A0053B098 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		22C352C22D8BE24A0053B098 /* Build configuration list for PBXNativeTarget "DnDictate" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				22C352C32D8BE24A0053B098 /* Debug */,
+				22C352C42D8BE24A0053B098 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		22C352C52D8BE2C00053B098 /* XCRemoteSwiftPackageReference "supabase-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/supabase-community/supabase-swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.5.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		22C352C62D8BE2C00053B098 /* Auth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 22C352C52D8BE2C00053B098 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Auth;
+		};
+		22C352C82D8BE2C00053B098 /* Functions */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 22C352C52D8BE2C00053B098 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Functions;
+		};
+		22C352CA2D8BE2C00053B098 /* PostgREST */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 22C352C52D8BE2C00053B098 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = PostgREST;
+		};
+		22C352CC2D8BE2C00053B098 /* Realtime */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 22C352C52D8BE2C00053B098 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Realtime;
+		};
+		22C352CE2D8BE2C00053B098 /* Storage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 22C352C52D8BE2C00053B098 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Storage;
+		};
+		22C352D42D8BE3EF0053B098 /* Auth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 22C352C52D8BE2C00053B098 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Auth;
+		};
+		22C352D62D8BE3EF0053B098 /* Functions */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 22C352C52D8BE2C00053B098 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Functions;
+		};
+		22C352D82D8BE3EF0053B098 /* PostgREST */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 22C352C52D8BE2C00053B098 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = PostgREST;
+		};
+		22C352DA2D8BE3EF0053B098 /* Realtime */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 22C352C52D8BE2C00053B098 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Realtime;
+		};
+		22C352DC2D8BE3EF0053B098 /* Storage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 22C352C52D8BE2C00053B098 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Storage;
+		};
+		22C352DE2D8BE3EF0053B098 /* Supabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 22C352C52D8BE2C00053B098 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Supabase;
+		};
+		22C352E52D8BEA1C0053B098 /* Supabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 22C352C52D8BE2C00053B098 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Supabase;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 22C352AC2D8BE2490053B098 /* Project object */;
+}
