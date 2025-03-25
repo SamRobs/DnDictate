@@ -19,13 +19,34 @@
 		22C352B42D8BE2490053B098 /* DnDictate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DnDictate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		22775DA92D93582C0035868D /* Exceptions for "DnDictate" folder in "DnDictate" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				SignInView.swift,
+				SignUpView.swift,
+			);
+			target = 22C352B32D8BE2490053B098 /* DnDictate */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
 		22C352EA2D8BEC7A0053B098 /* Exceptions for "DnDictate" folder in "Copy Bundle Resources" phase from "DnDictate" target */ = {
 			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
 			buildPhase = 22C352B22D8BE2490053B098 /* Resources */;
 			membershipExceptions = (
+				AuthSelectionView.swift,
 				AuthView.swift,
-				SignIn.swift,
+				ContentView.swift,
+				DnDictateApp.swift,
+				Entity.swift,
+				EntityView.swift,
+				EntityView2.swift,
+				HomeView.swift,
+				Instrument.swift,
+				SignInView.swift,
+				SignUpView.swift,
+				Supabase.swift,
 			);
 		};
 /* End PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
@@ -34,6 +55,7 @@
 		22C352B62D8BE2490053B098 /* DnDictate */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
+				22775DA92D93582C0035868D /* Exceptions for "DnDictate" folder in "DnDictate" target */,
 				22C352EA2D8BEC7A0053B098 /* Exceptions for "DnDictate" folder in "Copy Bundle Resources" phase from "DnDictate" target */,
 			);
 			path = DnDictate;

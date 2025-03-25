@@ -1,13 +1,5 @@
 //
-//  ContentView 2.swift
-//  DnDictate
-//
-//  Created by Sam Robinson on 3/20/25.
-//
-
-
-//
-//  ContentView.swift
+// EnitityView.swift
 //  DnDictate
 //
 //  Created by Sam Robinson on 3/20/25.

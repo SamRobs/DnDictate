@@ -6,7 +6,7 @@
 //
 
 
-struct Instrument: Decodable, Identifiable {
+struct Instrument: Identifiable, Decodable {
   let id: Int
   let name: String
 }

@@ -41,6 +41,48 @@ class AuthViewModel: ObservableObject { // Renamed from SignUpViewModel
     }
 }
 
+struct SignInView: View {
+    @StateObject var viewModel = AuthViewModel()
+    @State private var isLoggedIn = false // Track login status
+
+    var body: some View {
+        VStack {
+            Text("Sign In")
+                .font(.title)
+                .padding()
+
+            Form {
+                TextField("Email", text: $viewModel.email)
+                    .autocapitalization(.none)
+                    .autocorrectionDisabled(true)
+                    .keyboardType(.emailAddress)
+
+                SecureField("Password", text: $viewModel.password)
+            }
+
+            Button("Sign In") {
+                Task {
+                    await viewModel.signIn()
+                    if viewModel.authStatus.contains("successful") {
+                        isLoggedIn = true // Set to true after successful login
+                    }
+                }
+            }
+            .padding()
+
+            Text(viewModel.authStatus)
+                .foregroundColor(viewModel.authStatus.contains("failed") ? .red : .green)
+                .padding()
+        }
+        .background(
+            NavigationLink(destination: HomeView(), isActive: $isLoggedIn) {
+                EmptyView()
+            }
+            .hidden() // Make the NavigationLink invisible
+        )
+    }
+}
+
 struct SignUpView: View {
     @StateObject var viewModel = AuthViewModel() // Updated to use AuthViewModel
 
@@ -64,8 +106,4 @@ struct SignUpView: View {
             Text(viewModel.authStatus) // Updated to use authStatus
         }
     }
-}
-
-#Preview {
-    SignUpView()
 }
