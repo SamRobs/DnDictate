@@ -7,16 +7,32 @@
 
 
 import SwiftUI
+import Supabase
 
 struct EntityView2: View {
-    
+    let supabase: SupabaseClient
     @State var entities: [Entity] = []
+    @State private var showAddEntitySheet = false
+    @State private var newName: String = ""
+    @State private var newDescription: String = ""
+    @State private var newType: Entity.EntityType = .character
+    @State private var errorMessage: String?
+    
+    init(supabase: SupabaseClient) {
+        self.supabase = supabase
+    }
     
     var body: some View {
         NavigationStack {
             List(entities) { entity in
-                Text(entity.name)
-                Text(entity.description)
+                VStack(alignment: .leading) {
+                    Text(entity.name)
+                    if let description = entity.description {
+                        Text(description)
+                            .font(.caption)
+                            .foregroundColor(.gray)
+                    }
+                }
             }
             .overlay {
                 if entities.isEmpty {
@@ -30,12 +46,43 @@ struct EntityView2: View {
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
                     Button(action: {
-                        Task {
-                            await addEntity()
-                        }
+                        showAddEntitySheet = true
                     }) {
                         Image(systemName: "plus")
                     }
+                }
+            }
+            .sheet(isPresented: $showAddEntitySheet) {
+                NavigationView {
+                    Form {
+                        Section(header: Text("New Entity")) {
+                            TextField("Name", text: $newName)
+                            
+                            Picker("Type", selection: $newType) {
+                                ForEach(Entity.EntityType.allCases, id: \.self) { type in
+                                    Text(type.rawValue).tag(type)
+                                }
+                            }
+                            
+                            TextField("Description", text: $newDescription)
+                        }
+                        
+                        if let errorMessage = errorMessage {
+                            Text(errorMessage)
+                                .foregroundColor(.red)
+                                .padding()
+                        }
+                        
+                        Button("Add") {
+                            Task {
+                                await addEntity()
+                            }
+                        }
+                    }
+                    .navigationTitle("Add Entity")
+                    .navigationBarItems(trailing: Button("Cancel") {
+                        showAddEntitySheet = false
+                    })
                 }
             }
         }
@@ -43,7 +90,7 @@ struct EntityView2: View {
     
     func fetchEntities() async {
         do {
-            let fetchedEntities: [Entity] = try await supabase.from("Entities").select().execute().value
+            let fetchedEntities: [Entity] = try await supabase.from("entities").select().execute().value
             
             DispatchQueue.main.async {
                 entities = fetchedEntities
@@ -57,19 +104,46 @@ struct EntityView2: View {
     }
     
     func addEntity() async {
-        let newEntity = Entity(id: UUID().hashValue, name: "New Entity", description: "New Entity Description") // Replace with actual entity properties
+        guard !newName.isEmpty else {
+            errorMessage = "Entity name cannot be empty."
+            return
+        }
+
+        let newEntity = Entity(
+            id: UUID(),
+            name: newName,
+            type: newType,
+            description: newDescription.isEmpty ? nil : newDescription,
+            confidence: 1.0,
+            isConfirmed: true,
+            sessionId: UUID().uuidString,
+            createdAt: Date()
+        )
         
         do {
-            try await supabase.from("Entities").insert(newEntity).execute()
-            
+            try await supabase.from("entities").insert(newEntity).execute()
+
+            // Clear form and close sheet on success
             DispatchQueue.main.async {
-                entities.append(newEntity)
+                newName = ""
+                newDescription = ""
+                newType = .character
+                errorMessage = nil
+                showAddEntitySheet = false
+                
+                // Refresh the entities list
+                Task {
+                    await fetchEntities()
+                }
             }
-            
-            print("Added new entity: \(newEntity)")
         } catch {
-            print("Error adding entity:")
-            dump(error)
+            DispatchQueue.main.async {
+                errorMessage = "Failed to add entity: \(error.localizedDescription)"
+            }
         }
     }
+}
+
+#Preview {
+    EntityView2(supabase: SupabaseClient(supabaseURL: URL(string: "https://example.com")!, supabaseKey: ""))
 }

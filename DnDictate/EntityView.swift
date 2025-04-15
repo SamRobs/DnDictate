@@ -6,11 +6,15 @@
 //
 
 import SwiftUI
+import Supabase
 
 struct EntityView: View {
-    
+    let supabase: SupabaseClient
     @State var instruments: [Instrument] = []
     
+    init(supabase: SupabaseClient) {
+        self.supabase = supabase
+    }
     
     var body: some View {
         List(instruments) { instrument in
@@ -32,5 +36,5 @@ struct EntityView: View {
 }
 
 #Preview {
-    EntityView()
+    EntityView(supabase: SupabaseClient(supabaseURL: URL(string: "https://example.com")!, supabaseKey: ""))
 }

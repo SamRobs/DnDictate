@@ -8,23 +8,32 @@
 import SwiftUI
 
 struct ContentView: View {
+    @EnvironmentObject private var supabaseManager: SupabaseManager
+    @State private var isAuthenticated = false
+    
     var body: some View {
-        NavigationStack {
-            VStack {
-                Text("Welcome to DnDictate")
-                    .font(.title)
-                    .padding()
-
-                NavigationLink(destination: AuthSelectionView()) {
-                    Text("Sign Up/Sign In")
-                        .padding()
-                        .frame(maxWidth: .infinity)
-                        .background(Color.blue)
-                        .foregroundColor(.white)
-                        .cornerRadius(10)
+        Group {
+            if isAuthenticated {
+                TabView {
+                    RecordingView(supabase: supabaseManager.client)
+                        .tabItem {
+                            Label("Record", systemImage: "mic")
+                        }
+                    
+                    EntityWikiView(supabase: supabaseManager.client)
+                        .tabItem {
+                            Label("Wiki", systemImage: "book")
+                        }
                 }
-                .padding()
+            } else {
+                SignInView()
             }
+        }
+        .onAppear {
+            isAuthenticated = supabaseManager.session != nil
+        }
+        .onChange(of: supabaseManager.session) { newSession in
+            isAuthenticated = newSession != nil
         }
     }
 }
